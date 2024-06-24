@@ -1,0 +1,832 @@
+/*^ En este desafío a nosostros nos gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+@import url("/style/reset.css");
+@import url("/style/cargar.css");
+
+.hidden{
+    overflow: hidden;
+}
+
+.centrado{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header{
+    background-color: #9ea5ad;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 5%;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header__icono {
+    display: flex;
+    height: 60px;
+    width: 355px;
+    justify-content: center;
+    align-items: center;
+    cursor: context-menu;
+}
+
+.header__brillo{
+    display: block;
+    width: 100px;
+    height: 100%;
+}
+
+.header__img{
+    display: none;
+}
+
+.header__title{
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: raleway;
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+}
+
+/*Sección Menu*/
+
+.menu__listas {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.menu__a {
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    transition: background-color 1s;
+}
+
+.menu__a:hover{
+    background-color: #ccc7c7;
+}
+.menu__a:focus{
+    background-color: #6f6d6d;
+}
+.menu__oculto{
+    display: none;
+}
+
+/*Sección Title*/
+
+.title__div{
+    background-color: #dae4f0;
+    display: flex;
+    padding: 1% 5%;
+    flex-direction: row-reverse;
+    height: 100%;
+    justify-content: start;
+    gap: 50px;
+    align-items: center;
+}
+
+.title__profile{
+    width: 500px;
+    height: 100%;
+    border-radius: 400px;
+}
+
+.title__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 80vw;
+}
+
+.title__bio{
+    font-size: 90px;
+    width: 100%;
+}
+
+.title__subsection{
+    font-size: 35px;
+    width: 100%;
+}
+
+.title__network{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.title__item{
+    height: 100%;
+    display: flex;
+}
+
+.title__a {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.title__a:hover{
+    background-color: #ccc7c7;
+}
+
+.title__img {
+    width: 48px;
+    height: 50px;
+}
+
+/*Sección About*/
+
+.about__container{
+    display: flex;
+    flex-direction: column;
+    background-color: #EAF2FD;
+    padding: 5%;
+    gap: 30px;
+}
+
+.about__title{
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.about__man{
+    width: 70px;
+    height: 70px;
+}
+
+.about__p{
+    font-size: 30px;
+    width: 70%;
+}
+
+.about__img{
+    width: 15%;
+}
+
+/*^ seccion skils */
+
+.skills{
+    background-color: #dae4f0;
+    padding: 1% 5%;
+}
+
+.skills__title{
+    background-color: #dae4f0;
+    display: flex;
+    justify-content: start;
+    font-size: 70px;
+    height: 250px;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.skills__tuerca{
+    width: 70px;
+}
+
+.skills__line {
+	background-color: #dae4f0;
+	display: flex;
+    justify-content: start;
+    align-items: center;
+	gap: 90px;
+    flex-wrap: wrap;
+}
+
+.skills__ul{
+    border-radius: 50px;
+    width: 190px;
+}
+
+.skills__li{
+    display: flex;
+    justify-content: center;
+}
+.skills__img{
+    width: 160px;
+    
+}
+
+.skills__name{
+    font-size: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Experiencia Académica*/
+
+/* experiencia*/
+
+.experience{
+    background-color: #EAF2FD;
+    padding: 1% 5%;
+}
+
+.experience__section__title{
+    background-color: #EAF2FD;
+    font-size: 70px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 220px;
+    margin: 0 50px;
+}
+
+.experience__box__img{
+    width: 60px;
+}
+
+.experience__box{
+    background-color: #EAF2FD;
+    display: flex;
+    gap: 60px;
+    justify-content: start;
+    align-items: center;
+}
+
+.experience__img{
+    width: 50vw;
+    height: 50%;
+    border: 1px solid #c5cdd7;
+    border-radius: 20px;
+}
+
+.experience__info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+}
+
+.experience__titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.experience__title{
+    font-size: 40px;
+    width: 100%;
+}
+
+.experience__text{
+    font-size: 25px;
+}
+
+.experience__description {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.experience__button{
+    border: 2px solid royalblue;
+    background-color: #EAF2FD;
+    color: royalblue;
+    padding: 13%;
+    width: 200px;
+    font-size: 28px;
+    border-radius: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.experience__button:hover{
+    background-color: #dae4f0;
+}
+
+.experience__button--color{
+    border: 2px solid royalblue;
+    background-color: royalblue;
+    color: #EAF2FD;
+}
+.experience__button--color:hover{
+    background-color: rgb(59, 96, 205);
+    color: #c5cdd7;
+}
+
+/*Contacto*/
+
+.contacto__todo{
+    background-color: #dae4f0;
+    display: flex;
+    padding: 7% 5% 2% 5%;
+    gap: 30px;
+    height: 100%;
+    align-items: center;
+}
+
+.contacto__foto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 550px;
+}
+
+.contacto__img{
+    width: 100%;
+    height: 100%;
+}
+
+.contacto__text{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+}
+
+.contacto__title{
+    font-size: 57px;
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: context-menu;
+    text-align: start;
+}
+
+.contacto__subtext{
+    font-size: 28px;
+    cursor: context-menu;
+}
+
+.contacto__form{
+    background-color: #dae4f0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    width: 100%;
+    margin-top: 35px;
+    position: relative;
+}
+
+.contacto__input{
+    background-color: #EAF2FD;
+    height: 75px;
+    padding: 0 20px;
+    font-size: 26px;
+}
+
+.contacto__textarea{
+    background-color: #EAF2FD;
+    height: 200px;
+    font-size: 25px;
+    padding: 17px;
+    resize: none;
+    
+}
+
+.contacto__botones{
+    display: inherit;
+    gap: 30px;
+}
+
+.contacto__btn{
+    background-color: royalblue;
+    color: #EAF2FD;
+    width: 220px;
+    height: 80px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.contacto__btn:hover{
+    background-color: rgb(59, 96, 205);
+    color: #c5cdd7;
+}
+
+.contacto__correo{
+    width: 260px;
+    height: 80px;
+    background-color: red;
+    color: #EAF2FD;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+.contacto__correo:hover{
+    background-color: rgb(182, 9, 9);
+    color: #c5cdd7;
+}
+.contacto__gmail{
+    width: 40px;
+}
+
+/*footer*/
+
+.footer__rodape{
+    background-color: #EAF2FD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 10vh;
+    font-size: 25px;
+}
+
+/*^ Ordenadores grandes */
+@media screen and (max-width: 1328px) {
+    .header__title{
+        font-size: 24px;
+    }
+
+    .menu__listas {
+        gap: 10px;
+    }
+    .menu__a {
+        font-size: 23px;
+    }
+    /* seccion title */
+
+    .title__div{
+        padding-top: 40px;
+        gap: 30px;
+    }
+    .title__profile{
+        width: 350px;
+    }
+    .title__container{
+        gap: 15px;
+    }
+    .title__bio{
+        font-size: 50px;
+    }
+    .title__subsection{
+        font-size: 23px;
+    }
+    .title__a{
+        font-size: 22px;
+    }
+    .title__img{
+        width: 30px;
+        height: 30px;
+    }
+    /* skills */
+    .skills__title{
+        margin: 0;
+    }
+
+    /* experiencia*/
+    .experience__section__title{
+        margin: 0;
+    }
+
+    .experience__button{
+        padding: 10%;
+        font-size: 20px;
+        width: 130px;
+    }
+
+    /**Contacto*/
+
+    .contacto__img{
+        height: 300px;
+    }
+
+    .contacto__form{
+        gap: 20px;
+    }
+    .contacto__input{
+        height: 65px;
+        font-size: 22px;
+    }
+    .contacto__textarea{
+        font-size: 20px;
+        height: 150px;
+    }
+    .contacto__btn{
+        height: 60px;
+        width: 170px;
+        font-size: 20px;
+    }
+    .contacto__correo{
+        height: 60px;
+        width: 200px;
+        font-size: 17px;
+    }
+    /*footer*/
+
+}
+
+/*^ tabletas */
+@media screen and (max-width: 960px) {
+
+    .header{
+        height: 65px;
+    }
+
+    .header__brillo{
+        width: 60px;
+        height: 50px;
+    }
+
+    .header__title{
+        justify-content: start;
+        font-size: 22px;
+    }
+
+    .menu__nav{
+        display: none;
+    }
+
+    .menu__listas{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 65px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    .menu__a{
+        position: relative;
+        justify-content: center;
+        display: flex;
+        background-color: #dae4f0;
+        border-radius: 0;
+        border: 1px solid #9ea5ad;
+        transition: none;
+    }
+    .menu__oculto{
+        display: block;
+        position: relative;
+        top: 0;
+    }
+
+    .menu__li{
+        display: block;
+    }
+    .menu__img{
+        width: 28px;
+        height: 28px;
+    }
+    .menu__a--oculto{
+        position: relative;
+        font-size: 25px;
+        display: flex;
+        background-color: #9ea5ad;
+        cursor: pointer;
+        justify-content: center;
+    }
+
+    .title__profile{
+        width: 40%;
+    }
+    .title__bio{
+        font-size: 40px;
+    }
+    .title__subsection{
+        font-size: 20px;
+    }
+    .title__network{
+        gap: 30px;
+    }
+
+    .about__title{
+        font-size: 55px;
+    }
+    .about__p{
+        font-size: 25px;
+    }
+    
+    .skills__line{
+        justify-content: start;
+        gap: 20px;
+    }
+    .skills__ul{
+        width: 200px;
+        background-color: #EAF2FD;
+        border-radius: 10px;
+    }
+    .skills__img{
+        width: 100px;
+    }
+    .skills__name{
+        font-size: 30px;
+    }
+
+
+    .experience__box{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .experience__img{
+        width: 100%;
+    }
+    .experience__info{
+        width: 100%;
+    }
+    .experience__titulo{
+        gap: 10px;
+    }
+    .experience__title{
+        font-size: 30px;
+    }
+    .experience__text{
+        font-size: 20px;
+    }
+
+
+    .contacto__foto{
+        display: none;
+    }
+    .contacto__text{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .menu__a--oculto{
+        right: 30px;
+    }
+    .title__div{
+        gap: 10px;
+        flex-direction: column;
+    }
+    .title__container{
+        width: 100%;
+    }
+
+    .about__container{
+        gap: 15px;
+    }
+    .about__title{
+        padding-top: 30px;
+    }
+    .skills__title{
+        height: 180px;
+    }
+    .experience__section__title{
+        height: 150px;
+    }
+}
+/*^ Celulares */
+@media screen and (max-width: 480px) {
+
+    /* seccion header */
+    .header{
+        height: 50px;
+    }
+    .header__icono{
+        height: auto;
+        width: auto;
+    }
+    .header__brillo{
+        width: 60px;
+        height: 40px;
+    }
+    .header__title{
+        font-size: 17px;
+    }
+
+    /* seccion menu */
+
+    .menu__oculto{
+        right: 20px;
+        top: 9px;
+    }
+    .menu__a{
+        font-size: 15px;
+    }
+    .menu__a--oculto{
+        font-size: 23px;
+        left: 0;
+        bottom: 6px;
+        height: 35px;
+    }
+    .menu__img{
+        width: 24px;
+        height: 24px;
+    }
+    .menu__listas{
+        top: 49px;
+        width: 120px;
+    }
+    /* seccion title */
+
+    .title__container{
+        width: 100%;
+        gap: 10px;
+    }
+    .title__bio{
+        font-size: 35px;
+    }
+    .title__subsection{
+        font-size: 17px;
+    }
+    .title__a{
+        font-size: 20px;
+    }
+    .title__img{
+        width: 25px;
+        height: 25px;
+    }
+
+    /* sobre mi */
+
+    .about__container{
+        gap: 10px;
+    }
+    .about__title{
+        font-size: 40px;
+    }
+    .about__man{
+        width: 50px;
+        height: 50px;
+    }
+    .about__p{
+        font-size: 20px;
+        width: 100%;
+    }
+
+    /*Sección skills*/
+    .skills__title{
+        height: 110px;
+        font-size: 40px;
+        gap: 5px;
+    }
+    .skills__tuerca{
+        width: 50px;
+    }
+    .skills__ul{
+        width: 92px;
+        height: 80px;
+    }
+    .skills__img{
+        width: 50px;
+        right: 28px;
+    }
+    .skills__name{
+        font-size: 20px;
+    }
+    
+    /* experiencia*/
+    .experience__section__title{
+        height: 100px;
+        font-size: 35px;
+    }
+    .experience__box__img{
+        width: 40px;
+    }
+
+    /*Contacto*/
+    .contacto__title{
+        font-size: 50px;
+    }
+    .contacto__subtext{
+        font-size: 25px;
+    }
+    .contacto__input{
+        font-size: 20px;
+        height: 50px;
+    }
+    .contacto__textarea{
+        padding: 10px;
+        font-size: 19px;
+    }
+    .contacto__btn{
+        width: 120px;
+        font-size: 15px;
+    }
+    .contacto__correo{
+        width: 160px;
+        font-size: 11px;
+    }
+
+    /*footer*/
+    .footer__rodape{
+        font-size: 15px;
+    }
+}

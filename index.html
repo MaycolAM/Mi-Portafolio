@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/hoja_documento.png" type="image/png">
+    <!--* Referencia de la hoja de estilo de Css -->
+    <link rel="stylesheet" href="./style/estilos.css">
+    <!--* Tipo de letra Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title>Mi Portafolio</title>
+    <!--* Script del documento JavaScript -->
+    <script defer src="validacion.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!--* Sección del Menú  -->
+    <div class="todo">
+        <header class="header">
+            <div class="header__icono">
+                <img class="header__brillo" src="assets/vector.png" alt="brillo">
+                <h3 class="header__title">Maycol Apaza Molina</h3>
+            </div>
+            <section class="menu">
+                <nav class="menu__nav" id="nav">
+                    <ul class="menu__listas" onclick="mostrarOcultar()">
+                        <li class="menu__li"><a class="menu__a" href="#title">Inicio</a></li>
+                        <li class="menu__li"><a class="menu__a" href="#sobre-mi">Sobre mi</a></li>
+                        <li class="menu__li"><a class="menu__a" href="#skills">Skills</a></li>
+                        <li class="menu__li"><a class="menu__a" href="#xp">Proyectos</a></li>
+                        <li class="menu__li"><a class="menu__a" href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="menu__oculto">
+                    <div class="menu__li"><a class="menu__a--oculto" onclick="mostrarOcultar()"><img class="menu__img" src="./assets/home.png" alt="home-img">Menu</a>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <!--* Sección del Header/Title/Hero -->
+        <section class="title" id="title">
+            <div class="title__div">
+                <img class="title__profile" src="assets/profile.jpg" alt="profile">
+                <div class="title__container">
+                    <h2 class="title__bio">Hola, mi nombre es Maycol Apaza y construyo paginas web</h2>
+                    <h3 class="title__subsection">Actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</h3>
+                    <ul class="title__network">
+                        <!--* Pon los enlaces de tus redes sociales favoritas -->
+                        <li class="title__item"><a class="title__a" href="https://github.com/MaycolAM" target="_blank"><img class="title__img" src="./assets/github-logo.png" alt="github-logo">Github <img class="title__img" src="./assets/door-open.png"></a></li>
+                        <li class="title__item"><a class="title__a" href="https://www.linkedin.com/in/maycol-apaza-6a31642am/" target="_blank"><img class="title__img" src="./assets/linkedin-logo.png" alt="linkedin-logo">Linkedin <img class="title__img" src="./assets/door-open.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--* Sección sobre mi -->
+        <section class="about" id="sobre-mi">
+            <div class="about__container">
+                <h3 class="about__title">Sobre mi <img class="about__man" src="./assets/man.png" alt="Man"></h3>
+                <p class="about__p">Soy Maycol Geanpierre Apaza Molina, tengo 20 años, soy de Argentina y tambien soy nuevo en este mundo de la programacion, empece este año. </p>
+                <p class="about__p">Hice y termine la escuela primeria y secundaria pero todavia no la universitaria, nose como me ira con esto pero seguire intentandolo. </p>
+            </div>
+        </section>
+        <!--* Sección de Skills -->
+        <section class="skills" id="skills">
+            <h3 class="skills__title">Skills <img class="skills__tuerca" src="assets/tuercas.png" alt="Tuercas"></h3>
+            <div class="skills__line">
+                <div class="skills__box">
+                    <ul class="skills__ul">
+                        <li class="skills__li"><img class="skills__img" src="assets/html5-logo.png" alt="HTML 5"></li>
+                        <li class="skills__name">HTML 5 </li>
+                    </ul>
+                </div>
+                <div class="skills__box">
+                    <ul class="skills__ul">
+                        <li class="skills__li"><img class="skills__img" src="assets/javascript-logo.png" alt="Javascript"></li>
+                        <li class="skills__name">Javascript</li>
+                    </ul>
+                </div>
+                <div class="skills__box">
+                    <ul class="skills__ul">
+                        <li class="skills__li"><img class="skills__img" src="assets/css3-logo.png" alt="CSS"> </li>
+                        <li class="skills__name">CSS</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--* Sección de Experiencia Profesional/Proyectos-->
+        <section class="experience" id="xp">
+            <h2 class="experience__section__title">Proyectos <img class="experience__box__img" src="./assets/box.png" alt="box"></h2>
+            <!--* Pon el logotipo/captura de pantalla de tu proyecto -->
+            <div class="experience__box">
+                <img class="experience__img" src="./assets/encriptador_desencriptador.png" alt="secretcode">
+                <div class="experience__info">
+                    <div class="experience__titulo">
+                        <h2 class="experience__title">Encriptador y Desencriptador de texto</h2>
+                        <h3 class="experience__text">Challenge Oracle </h3>
+                    </div>
+                    <!--* Pon el enlace del proyecto en Github o GithubPages -->
+                    <div class="experience__description">
+                        <span class="experience__repo"><a class="experience__repo" href="https://github.com/MaycolAM/PI-Encriptador-Desencriptar.git" target="_blank"><button class="experience__button">Repositório</button></a></span>
+                        <span class="experience__demo"><a href="https://maycolam.github.io/PI-Encriptador-Desencriptar/" target="_blank"><button class="experience__button experience__button--color">Ver demo</button></a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--* Sección de Contacto -->
+        <section class="contacto__section" id="contacto">
+            <div  class="contacto__todo">
+                <div class="contacto__foto">
+                    <img class="contacto__img" src="assets\contact_image.png" alt="contactoFoto">
+                </div>
+                <div class="contacto__text">
+                    <h2 class="contacto__title">Contacto</h2>
+                    <h3 class="contacto__subtext">¿Quieres contactarme?</h3>
+                    <h3 class="contacto__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
+                    <form action="https://formsubmit.co/maycolapazamolina@gmail.com" method="POST" class="contacto__form" name="form">
+                        <input class="contacto__input" type="text" name="nombre" placeholder="Nombre" autocomplete="off" required>
+                        <input class="contacto__input" type="email" name="email" placeholder="Correo Electrónico" autocomplete="off" required>
+                        <input class="contacto__input" type="text" name="asunto" placeholder="Asunto" autocomplete="off" required>
+                        <textarea class="contacto__textarea" id="mensagem" name="mensaje" placeholder="Mensaje" autocomplete="off"></textarea>
+                        
+                        <div class="contacto__botones" >
+                            <button class="contacto__btn" type="submit">Enviar mensaje desde aqui</button>
+                            <a class="contacto__correo" href="mailto:maycolapazamolina@gmail.com">Enviar mensaje desde Gmail<img class="contacto__gmail" src="./assets/gmail.png"></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--* Sección de Footer -->
+        <section class="footer">
+            <div class="footer__rodape">
+                <p>Desarrollado por Maycol Apaza Molina</p>
+                <p>2024</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
